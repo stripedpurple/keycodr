@@ -1,0 +1,17 @@
+{
+  "name": "keycode",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "milligram": "^1.4.1",
+    "preact": "^10.5.15"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.1.5",
+    "vite": "^2.7.2"
+  }
+}
