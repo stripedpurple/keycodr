@@ -1,17 +1,26 @@
 import {useEffect, useState} from 'preact/hooks'
 import Stat from './components/Stat.jsx'
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css';
+
+const notyf = new Notyf({position: {
+  x: 'right',
+  y: 'top',
+},});
 
 import GHLogo from './ghlogo.jsx'
 
 export function App(props) {
+  // toast.success('test')
+  
   const [key, setKey] = useState({})
-
-
+  
+  
   const handleKey = (e) => {
     const {keyCode, code, location, which, key} = e
-
+    
     e.preventDefault()
-
+    
     setKey({
       keyCode,
       code,
@@ -20,9 +29,14 @@ export function App(props) {
       key
     })
   }
-
+  
   const copy2clip = (text) => {
-    navigator.clipboard.writeText(text).then(() => console.log('copied'))
+    try {
+      navigator.clipboard.writeText(text)
+      notyf.success('Copied!')
+    } catch (e) {
+      notyf.error('Copy failed!')
+    }
   }
 
   useEffect(() => {

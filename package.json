@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "milligram": "^1.4.1",
+    "notyf": "^3.10.0",
     "preact": "^10.5.15"
   },
   "devDependencies": {
