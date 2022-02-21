@@ -11,8 +11,6 @@ const notyf = new Notyf({position: {
 import GHLogo from './ghlogo.jsx'
 
 export function App(props) {
-  // toast.success('test')
-  
   const [key, setKey] = useState({})
   
   
