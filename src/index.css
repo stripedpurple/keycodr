@@ -1,7 +1,27 @@
 :root {
-  --purple: #9b4dca;
-  --dark: #333;
-  --light: #eeeeee;
+  --white: #eeeeee;
+  --blackk: hsl(260deg 20% 11%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --purple: hsl(262deg 52% 47%);
+    --dark: var(--black);
+    --light: var(--white); 
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --purple: hsl(262deg 52% 47%);
+    --dark: #eeeeee;
+    --light: hsl(260deg 20% 11%);
+  }  
+}
+
+
+body {
+  color: var(--dark);
+  background-color: var(--light);
 }
 
 html, body, #app {
@@ -18,11 +38,18 @@ html, body, #app {
   align-items: center;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .flex {
   display: flex;
 }
 
-.flex-column {
+.flex-row{
+  flex-direction: row;
+}
+.flex-col {
   flex-direction: column;
 }
 
@@ -59,7 +86,7 @@ background-color: var(--dark);
 }
 .stat .header{
   background-color: var(--purple);
-  color: var(--light);
+  color: var(--white);
   font-weight: bold;
   font-size: 2rem;
 }
@@ -91,11 +118,11 @@ background-color: var(--dark);
   align-items: center;
 }
 
-.flex-grow{
+.grow{
   flex: 1 !important;
 }
 
-.flex-shrink{
+.shrink{
   flex: 0 !important;
 }
 
@@ -111,4 +138,17 @@ background-color: var(--dark);
 
 .mr-2 {
   margin-right: 1rem;
+}
+
+*.button {
+  background-color: var(--purple);
+  border-color: var(--purple);
+}
+*.button.button-clear,
+*.button.button-outline {
+  background-color: transparent;
+  color: var(--purple);
+}
+*.button.button-clear {
+  border-color: transparent;
 }

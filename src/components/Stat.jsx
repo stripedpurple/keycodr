@@ -11,7 +11,7 @@ const Stat = ({title, content, ...rest}) => {
     }
 
     return (
-        <div className="stat flex flex-column" {...rest}>
+        <div className="stat flex flex-col" {...rest}>
             <div className="header">
                 {title}
             </div>

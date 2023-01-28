@@ -47,12 +47,12 @@ export function App(props) {
   return (
     <>
 
-      <div className="row fixed-top px-2 py-1">
-        <div className="column flex-grow">
+      <div className="row fixed-top px-2 py-1 flex-row">
+        <div className="column column-50">
           <h3><strong>keycodr</strong></h3>
         </div>
-        <div className="column flex-shrink text-right">
-          <a href="https://github.com/stripedpurple/keycodr" target={'_blank'} className="button-outline button justify-center align-center flex">
+        <div className="column column-50 text-right">
+          <a href="https://github.com/stripedpurple/keycodr" target={'_blank'} className="button-outline button justify-center align-center inline-flex">
             <GHLogo/><span className="mr-2"/> github
           </a>
         </div>
