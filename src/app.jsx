@@ -52,7 +52,7 @@ export function App(props) {
           <h3><strong>keycodr</strong></h3>
         </div>
         <div className="column column-50 text-right">
-          <a href="https://github.com/stripedpurple/keycodr" target={'_blank'} className="button-outline button justify-center align-center inline-flex">
+          <a href="https://github.com/stripedpurple/keycodr" target={'_blank'} className="button justify-center align-center inline-flex">
             <GHLogo/><span className="mr-2"/> github
           </a>
         </div>
